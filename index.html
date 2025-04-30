@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <style>
+        @font-face {
+            font-family: 'Azuki';
+            src: url('fonts/azuki.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Azuki', sans-serif;
+            background-image: url('final-sketch.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        .parent-right {
+            position: absolute;
+            top: 32%;
+            right: 16%;
+            transform: rotate(-4deg);
+            width: 20vw;
+        }
+
+        .female-sketch {
+            width: 120%;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 3%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index, .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            color: gray;
+        }
+
+        p {
+            font-size: 1.8vw;
+            color: gray;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index-removebg-preview.png" class="book-index"></a>
+            <a href="raffa.html"><img src="photos/assets/people-button-removebg-preview.png" class="people-button"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h1>Welcome to my Journal !!</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem ipsa, exercitationem corporis officiis autem quis ratione non fugit magni itaque doloribus perspiciatis minima blanditiis ab in excepturi, eaque dolores.</p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="parent-right">
+            <img src="photos/polaroid/sketch-index-female-removebg-preview.png" class="female-sketch">
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Exit</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
