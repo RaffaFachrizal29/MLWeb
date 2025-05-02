@@ -26,7 +26,7 @@
 
         body {
             font-family: 'dudu';
-            background-image: url('final-sketch.jpg');
+            background-image: url('bg/selectprofile.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -42,15 +42,47 @@
             width: 100%;
             height: 100%;
         }
-
+        /* Left Section */
         .parent-left {
             position: absolute;
             top: 30%;
             left: 10%;
             transform: rotate(-4deg);
             width: 35vw;
+            padding: 1vw;
         }
 
+        #raffa{
+            width: 45%;
+            position: absolute;
+            left: 5%;
+            transform: rotate(-3deg);
+            box-shadow: 1px 1px 1px black;
+            transition: ease 0.1s;
+            z-index: 1;
+        }
+
+        #raffa:hover {
+            transform: scale(1.2) rotate(3deg);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+        }
+
+        #raja{
+            position: absolute;
+            width: 45%;
+            left: 50%;
+            top: 800%;
+            transform: rotate(-10deg);
+            z-index: 2;
+            transition: ease 0.1s;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        #raja:hover{
+            transform: scale(1.2);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+        }
+        /* Right Section */
         .parent-right {
             position: absolute;
             top: 32%;
@@ -59,11 +91,7 @@
             width: 20vw;
         }
 
-        .female-sketch {
-            width: 120%;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
-
+        /* Top Section */
         .parent-top {
             position: absolute;
             top: 5%;
@@ -83,7 +111,7 @@
         .people-button:hover {
             transform: scale(1.1) rotate(-10deg);
         }
-
+        /* Bottom Section */
         .parent-bottom {
             position: absolute;
             bottom: 5%;
@@ -131,13 +159,13 @@
 
         <!-- Left Content -->
         <div class="parent-left">
-            <h1>Welcome to our Journal !!</h1>
-            <p>website buatan kami yang mengambil konsep dari journal game life is strange 1, kenal kami lebih dekat lewat journal yang berantakan ini. Happy Reading !!</p>
+            <a href="raffa.html"><img src="photos/profile/raffa.png" id="raffa"></a>
+            <a href="raja.html"><img src="photos/profile/raja.png" id="raja"></a>
         </div>
 
         <!-- Right Image -->
         <div class="parent-right">
-            <img src="photos/polaroid/sketch-index-female-removebg-preview.png" class="female-sketch">
+            
         </div>
 
         <!-- Bottom Navigation -->
