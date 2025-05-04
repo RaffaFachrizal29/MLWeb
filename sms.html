@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         @font-face {
             font-family: 'dudu';
@@ -26,7 +27,7 @@
 
         body {
             font-family: 'dudu';
-            background-image: url('final-sketch.jpg');
+            background-image: url('bg/sms.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -43,26 +44,14 @@
             height: 100%;
         }
 
-        .parent-left {
+        .parent-center {
             position: absolute;
             top: 30%;
-            left: 10%;
-            transform: rotate(-4deg);
+            left: 35%;
+            /* transform: rotate(-4deg); */
             width: 35vw;
         }
 
-        .parent-right {
-            position: absolute;
-            top: 32%;
-            right: 16%;
-            transform: rotate(-4deg);
-            width: 20vw;
-        }
-
-        .female-sketch {
-            width: 120%;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
 
         .parent-top {
             position: absolute;
@@ -73,7 +62,7 @@
             transform: rotate(-10deg);
         }
 
-        .book-index, .people-button, .button-sms{
+        .book-index, .people-button {
             width: 9vw;
             transition: transform 0.2s ease;
             cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
@@ -81,8 +70,7 @@
         }
 
         .book-index:hover,
-        .people-button:hover,
-        .button-sms:hover {
+        .people-button:hover {
             transform: scale(1.1) rotate(-10deg);
         }
 
@@ -111,16 +99,15 @@
             transform: rotate(-6deg);
         }
 
-        h1 {
-            font-size: 2.5vw;
-            color: gray;
+        /* Form Style */
+        .comment-box {
+            border: 1px solid black;
+            margin: 10px 0;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            background-color: #fdf6e3;
         }
 
-        p {
-            font-size: 1.8vw;
-            color: gray;
-            text-align: left;
-        }
     </style>
 </head>
 <body>
@@ -132,17 +119,14 @@
             <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
         </div>
 
-        <!-- Left Content -->
-        <div class="parent-left">
-            <h1>Welcome to our Journal !!</h1>
-            <p>website buatan kami yang mengambil konsep dari journal game life is strange 1, kenal kami lebih dekat lewat journal yang berantakan ini. Happy Reading !!</p>
+        <!-- Content -->
+        <div class="parent-center">
+            <div id="c_widget">
+                <script src="comment-widget-pink/comment-widget.js"></script>
+                <script src="/comment-widget-pink/comment-widget.js"></script>
+            </div>
         </div>
-
-        <!-- Right Image -->
-        <div class="parent-right">
-            <img src="photos/polaroid/sketch-index-female-removebg-preview.png" class="female-sketch">
-        </div>
-
+        
         <!-- Bottom Navigation -->
         <div class="parent-bottom">
             <ul class="hozbar">
@@ -152,5 +136,6 @@
             </ul>
         </div>
     </div>
+    <!-- Comment Script -->
 </body>
 </html>
