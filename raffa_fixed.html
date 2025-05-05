@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/bg-rf-revamp.jpg');
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        .selfie {
+            width: 50%;
+        }
+
+        .parent-right {
+            position: absolute;
+            top: 15%;
+            right: 9%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        .parent-right p {
+            margin: 1vw;
+        }
+
+        .outside-right {
+            z-index: 1;
+            position: absolute;
+            top: 30%;
+            right: 8%;
+            transform: rotate(-4deg);
+            width: 20vw;
+        }
+
+        
+.ipod {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    cursor: url('cursor/liscursor/Cursor LiS/Help.cur'), pointer;
+    z-index: 10;
+}
+
+.ipod:hover {
+    opacity: 0.8;
+}
+
+#popupWindow {
+    background: url(photos/assets/ipodplayer.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    width: 300px;
+    height: 500px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+        .popup-content {
+            position: relative;
+            text-align: center;
+        }
+
+        #closePopup {
+            position: absolute;
+            right: 4vw;
+            top: -6vw;
+            cursor: pointer;
+            font-size: 32px;
+            color: #ff0000;
+        }
+
+        h4,
+        h5 {
+            font-size: x-small;
+            margin-bottom: 4px;
+        }
+
+        /* Music Player */
+        .custom-audio-player {
+            font-family: 'Azuki', cursive;
+            background: transparent;
+            padding: 10px;
+            border-radius: 10px;
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #playPauseBtn {
+            background: none;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+        }
+
+        #seekBar {
+            flex: 1;
+            appearance: none;
+            height: 6px;
+            background: none;
+            border: 2px solid gray;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #currentTime,
+        #duration {
+            display: block;
+            float: left;
+            margin: 2px 2px 0 0;
+            padding: 5px 10px;
+        }
+
+        #eyedazzler {
+            position: absolute;
+            width: 20%;
+            box-shadow: 3px 3px 3px black;
+            margin-left: 10vw;
+            margin-right: 100vw;
+        }
+
+        #fitplayer {
+            margin-bottom: 18vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h1>Raffa-Mode: ON !!</h1>
+            <img align="right" src="photos/assets/rfbgrm.png" class="selfie">
+            <p align="left">Kenalin namaku Raffa Fachryzal, dan sejak aku masih kecil aku mau jadi seorang fotografer.
+                Aku slalu ngeliat dunia melalui lensa finder-ku". Mungkin ini cara bagiku tuk jadi bagian dari dunia,
+                tapi pada jarak yang aman. He. He. He</p>
+            <p>
+                Tuk beberapa alasan aku slalu tertarik pada Kamera Analog tua daripada Teknologi Digital Aku suka jenis
+                gaya dan tekniknya, tapi bagiku, Kamera Selfie Instan yang paling ku sukai Aku ngga peduli jika
+                orang-orang mengejekku atau ngga. Aku yang mengatur diriku, kan?</p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="outside-right">
+            <img src="photos/assets/ipodclear.png" class="ipod" id="openPopup">
+        </div>
+        <div class="parent-right">
+            <h1>Music !!</h1>
+            <p>Aku juga sering dengerin music, malah bisa sampe 24/7 jam, my music favorite ku itu dari band Alison's
+                Halo, mungkin kamu ga pernah denger, karena emang bandnya itu underrated banget, kurang populer lah
+                istilahnya, dan ku tu paling suka sama music yang kurang populer, karena kayak serasa aku sendiri yang
+                punya music itu he he he. Aku paling suka sama lagu judulnya Jetpack For Julian
+            <p>
+            <p>Klik -->
+                buat dengerin music nyaa</p>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Exit</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Pop Up -->
+    <div id="popupWindow">
+        <div class="popup-content">
+            <div id="fitplayer">
+                <span id="closePopup">&times;</span>
+                <h3>Music !!</h3>
+                <br>
+                <img src="photos/assets/eyedazzler.jpeg" id="eyedazzler" align="left">
+                <h4 align="left">Jetpacks For Julian</h4>
+                <h5 align="left">Alison's Halo</h5>
+                <h5 align="left">Eyedazzler</h5>
+                <div class="custom-audio-player" id="player">
+                    <button id="playPauseBtn"> ▶︎</button>
+                    <span id="currentTime">0:00</span> /
+                    <span id="duration">0:00</span>
+                    <input type="range" id="seekBar" value="0" min="0" max="100">
+                    <audio id="audio" src="audio/my-audio.mp3"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const popup = document.getElementById('popupWindow');
+    const openBtn = document.getElementById('openPopup');
+    const closeBtn = document.getElementById('closePopup');
+
+    openBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // Optional: klik luar popup untuk menutup
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+</script>
+<script>
+    const audio = document.getElementById("audio");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const currentTimeEl = document.getElementById("currentTime");
+    const durationEl = document.getElementById("duration");
+    const seekBar = document.getElementById("seekBar");
+
+    let isPlaying = false;
+
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    }
+
+    playPauseBtn.addEventListener("click", () => {
+        if (isPlaying) {
+            audio.pause();
+            playPauseBtn.textContent = " ▶︎";
+        } else {
+            audio.play();
+            playPauseBtn.textContent = "||";
+        }
+        isPlaying = !isPlaying;
+    });
+
+    audio.addEventListener("loadedmetadata", () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener("timeupdate", () => {
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+        seekBar.value = (audio.currentTime / audio.duration) * 100;
+    });
+
+    seekBar.addEventListener("input", () => {
+        audio.currentTime = (seekBar.value / 100) * audio.duration;
+    });
+</script>
+
+</html>

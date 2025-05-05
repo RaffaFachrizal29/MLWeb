@@ -1,0 +1,33 @@
+/* Input Section */
+.c-input {
+    border: none;
+    background: transparent;
+    margin: 1vw;
+}
+
+.c-input:focus{
+    border: none;
+    outline: none;
+}
+
+.c-textInput{
+    resize: none;
+    background-image: url(bg/notebook-sms.png);
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 1px 2px 3px black;
+    scroll-behavior: smooth;
+}
+
+/* Button */
+#c_submitButton{
+    border: none;
+    background: transparent;
+    margin: 1vw;
+}
+
+#c_submitButton:hover{
+    color: darkgray;
+}
+

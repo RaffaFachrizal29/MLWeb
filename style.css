@@ -65,7 +65,7 @@ body {
     width: 9vw;
     transition: transform 0.2s ease;
     cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
-    box-shadow: 1px 2px 5px black;
+    box-shadow: 0.1vw 0.1vw 0.1vw black;
 }
 
 .book-index:hover,
